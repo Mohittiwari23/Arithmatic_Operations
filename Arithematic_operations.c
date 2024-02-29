@@ -44,6 +44,7 @@ void add(int base,int x,int y){
 		ans=ans+((a[i]^b[i]^carr)*power(2,i));
 		carr=(a[i]&b[i])|(carr&(a[i]^b[i]));
 	}
+	printf("%d\n",ans);
 	int temp=ans;
 	while(temp>0){
 		temp=temp/base;
@@ -59,7 +60,7 @@ void add(int base,int x,int y){
 }
 
 int main(){
-    int a=27,b=25;
-    int base=8;
+    int a=1010,b=10100;
+    int base=2;
 	add(base,a,b);
 }
